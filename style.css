@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    list-style: none;
+}
+
+:root {
+    /* --primary-text-color: #183b56;
+    --secondry-text-color: #577592;
+    --accent-color: #2294ed;
+    --accent-color-dark: #1d69a3;
+    --padding-inline-section: 20px; */
+
+    --primary-color: #7380ec;
+    --danger-color: #ff7782;
+    --success-color: #41f1b6;
+    --white-color: #fff;
+    --info-dark-color: #7d8da1;
+    --info-light-color: #dce1eb;
+    --dark-color: #363949;
+    --warning-color: #ff4edc;
+    --light-color: rgba(132, 139, 200, 0.18);
+    --primary-variant-color: #111e88;
+    --dark-variant-color: #677483;
+    --background-color: #f6f6f9;
+
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 1.2rem;
+    
+    --card-padding:1.8rem;
+    --padding-1: 1.2rem;
+    --box-shadow: 0 2rem 3rem var(--light-color);
+}
+
+body {
+    font-family: 'Poppins', 'san-serif';
+    width: 100vw;
+    height: 100vh;
+    font-size: 0.88rem;
+    user-select: none;
+    overflow: hidden;
+    background:var(--background-color);
+}
+h1 {
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+h2{
+    font-size: 1.4rem;
+}
+h3 {
+    font-size: 0.87rem;
+}
+h4 {
+    font-size: 0.8rem;
+}
+h5 {
+    font-size: 0.77rem;
+}
+.small {
+    font-size: 0.7rem;
+}
+.profile-photo {
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.container {
+    display: grid;
+    width: 96%;
+    gap: 1.8rem;
+    grid-template-columns: 14rem auto 14rem;
+    margin: 0 auto;
+}
+.text-muted {
+    color: var(--info-dark-color);
+}
+p{
+    color: var(--dark-variant-color);
+}
+b {
+    color: var(--dark-color);
+}
+.primary {
+    color: var(--primary-color);
+}
+.success {
+    color: var(--success-color);
+}
+.danger {
+    color: var(--danger-color);
+}
+.warning {
+    color: var(--warning-color);
+}
+
+a {
+    color: var(--dark-color);
+}
+
+/* aside */
+aside {
+    height: 100vh;
+}
+
+aside .top {
+    background-color: var(--white-color);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1.4rem;
+}
+.logo {
+    display: flex;
+    gap: 1rem;
+}
+aside .top div.close {
+    display: none;
+}
+
+/***************  
+sidebar
+****************/
+
+aside .sidebar {
+    background-color: var(--white-color);
+    display: flex;
+    flex-direction: column;
+    height: 86vh;
+    position: relative;
+    top: 1rem;
+}
+
+aside .h3 {
+    font-weight: 800;
+}
+
+aside .sidebar a {
+    display: flex;
+    color: var(--info-dark-color);
+    margin-left: 2rem;
+    gap: 1rem;
+    align-items: center;
+    height: 3.2rem;
+    transition: all 1s ease;
+}
+
+aside .sidebar a span {
+    font-size: 1.6rem;
+    transition: all 1s ease-in;
+}
+
+aside .sidebar a:last-child {
+    position: absolute;
+    bottom: 1rem;
+    width: 100%;
+}
+
+aside .sidebar a.active {
+    background: var(--light-color);
+    color: var(--primary-color);
+    margin-left: 0;
+    border-left: 5px solid var(--primary-color);
+}
+
+aside .sidebar a.active::before {
+    content: '';
+    width: 6px;
+    height: 100%;
+    background-color: var(--primary-color);
+}
+
+aside .sidebar a:hover {
+    color: var(--primary-color);
+}
+
+aside .sidebar a:hover span {
+    margin-left: 1rem;
+    transition: 0.4s all ease;
+}
+aside .sidebar a span.msg_count {
+    background: var(--danger-color);
+    color: var(--white-color);
+    padding: 2px 5px;
+    font-size: 11px;
+    border-radius: var(--border-radius-1);
+}
